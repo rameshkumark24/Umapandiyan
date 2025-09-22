@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 const Home = () => {
   return <>
       <Helmet>
-        <title>Uma Pandiyan - Holistic Therapist | No more Procrastination, only Transformation.</title>
+        <title>UmaPandiyan - Holistic Therapist | Life Coach.</title>
         <meta name="description" content="Experience transformative holistic therapy with Uma Pandiyan. Personalized healing sessions combining ancient wisdom with modern techniques for your complete wellness journey." />
       </Helmet>
 
@@ -62,7 +62,7 @@ const Home = () => {
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSeZMmTnBnXvEx86B3K_aUfscQ0h7WAtWAAXurrYfwAcDeCeoQ/viewform?usp=header" target="_blank" rel="noopener noreferrer">
                   <Button className="bg-[#B8860B] text-white hover:bg-white hover:text-[#B8860B] border border-[#B8860B] px-8 py-3 text-lg pulse-glow shadow-lg transition-colors duration-300">
                     Book Your Session
-                    <ArrowRight className="ml-2 w-5 h-5" />
+                    <ArrowRight className="ml-2 w-5 h-5" /> 
                   </Button>
                 </a>
                 <Link to="/about">
