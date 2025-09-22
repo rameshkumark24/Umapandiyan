@@ -64,21 +64,12 @@ const Testimonials = () => {
     },
     {
       id: 8,
-      name: "New Client",
-      location: "Location",
+      name: "Hema",
+      location: "Dindugul",
       rating: 5,
-      text: "Listen to my full audio testimonial below!",
-      treatment: "Holistic Healing",
-      audioSrc: "/audio/your-audio-file.mp3"
-    },
-    {
-      id: 9,
-      name: "New Client",
-      location: "Location",
-      rating: 5,
-      text: "Listen to my full audio testimonial below!",
-      treatment: "Holistic Healing",
-      audioSrc: "/audio/your-audio-file.mp3"
+      text: "Hi, this is Hema. I had heard about Uma's coaching a year and a half ago, but I took it lightly at the time. I'm from out of town and am currently staying with my parents. I knew she had coached a girl whose results were superb. I have struggled a lot and faced many challenges in my life. Now, she is coaching me, and I feel much better. I had significant financial difficulties, but since starting her coaching, I have been able to secure one order after another in my work. This has allowed me to become financially stable.I am now referring my husband to her as well.Thank you.",
+      treatment: "Holistic Healing for Finance",
+      audioSrc: "https://audio.jukehost.co.uk/oEAX1CpCG5ilqYBmrfcWuAon8P8UziJO"
     }
   ];
 
