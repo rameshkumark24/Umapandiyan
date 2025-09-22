@@ -54,7 +54,7 @@ const Navbar = () => {
             <div className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden">
               <img
                 src="https://i.postimg.cc/RFZTXg00/Professional-Lettermark-Logo-with-U.png"   // place your uploaded logo here
-                alt="Logo"
+                alt="Umapandiyan Holistic Therapist| Life Coach Logo "
                 className="w-full h-full object-cover"
               />
             </div>
