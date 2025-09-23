@@ -86,7 +86,7 @@ const Home = () => {
               <div className="relative w-full max-w-md mx-auto">
                 <div className="absolute inset-0 gold-gradient-bg rounded-full blur-3xl opacity-30 floating-animation"></div>
 <video class="relative z-10 w-full h-auto rounded-2xl shadow-2xl hover-lift" controls>
-  <source src="https://example.com/your-video.mp4" type="video/mp4" />
+  <source src="https://ik.imagekit.io/a5mvzxm72/VN20250923_193026.mp4?updatedAt=1758636248303" type="video/mp4" />
   Your browser does not support the video tag.
               </video>
             </div>
