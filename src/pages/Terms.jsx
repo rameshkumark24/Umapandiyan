@@ -52,7 +52,7 @@ content: [
   return (
     <>
       <Helmet>
-        <title>Terms & Conditions - UmaPandiyan Holistic Therapy | Service Agreement</title>
+        <title>Terms & Conditions - Uma Pandiyan Holistic Therapy | Service Agreement</title>
         <meta name="description" content="Read the terms and conditions for UmaPandiyan's holistic therapy services, including privacy policy, cancellation terms, and service agreements." />
       </Helmet>
 
@@ -70,7 +70,7 @@ content: [
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Please read these terms carefully before using our holistic therapy services. 
-              These terms govern your relationship with UmaPandiyan's practice.
+              These terms govern your relationship with Uma Pandiyan's practice.
             </p>
           </motion.div>
 
