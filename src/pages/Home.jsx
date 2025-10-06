@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, UserCheck, HeartHandshake, Zap, Sunrise, Sparkles, Star, Quote } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+// NEW: Import the Carousel components
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 const Home = () => {
   // Data for the home page testimonials section
@@ -47,7 +49,7 @@ const Home = () => {
         />
       </Helmet>
 
-      {/* Hero Section */}
+      {/* Hero Section (Unchanged) */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden font-body">
         <div className="absolute inset-0 bg-gradient-to-br from-white to-primary-lightest opacity-50"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -133,7 +135,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Offerings Section */}
+      {/* Offerings Section (Unchanged) */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -176,7 +178,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Quote Section */}
+      {/* Quote Section (Unchanged) */}
       <section className="py-20 bg-white font-body">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -193,7 +195,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* NEW Testimonials Section */}
+      {/* UPDATED Testimonials Section */}
       <section className="py-20 bg-white font-body">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -211,54 +213,69 @@ const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {homeTestimonials.map((testimonial, index) => (
-              <motion.div
-                key={testimonial.id}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-[#F9EBF8] rounded-2xl p-8 shadow-lg hover-lift relative flex flex-col"
-              >
-                <div className="absolute top-4 right-4 text-accent-gold opacity-20">
-                  <Quote className="w-8 h-8" />
-                </div>
+          {/* Carousel replaces the grid */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"
+            >
+              <CarouselContent>
+                {homeTestimonials.map((testimonial) => (
+                  <CarouselItem key={testimonial.id} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1 h-full">
+                      <div className="bg-[#F9EBF8] rounded-2xl p-8 shadow-lg hover-lift relative flex flex-col h-full">
+                        <div className="absolute top-4 right-4 text-accent-gold opacity-20">
+                          <Quote className="w-8 h-8" />
+                        </div>
 
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
+                        <div className="flex items-center mb-4">
+                          {[...Array(testimonial.rating)].map((_, i) => (
+                            <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                          ))}
+                        </div>
 
-                {testimonial.audioSrc ? (
-                  <>
-                    <p className="text-gray-700 mb-4 font-bold leading-relaxed flex-grow italic">
-                      "{testimonial.text}"
-                    </p>
-                    <audio controls className="w-full mt-4">
-                      <source src={testimonial.audioSrc} type="audio/mpeg" />
-                      Your browser does not support the audio element.
-                    </audio>
-                  </>
-                ) : (
-                  <p className="text-gray-700 mb-6 font-bold leading-relaxed flex-grow italic">
-                    "{testimonial.text}"
-                  </p>
-                )}
+                        {testimonial.audioSrc ? (
+                          <>
+                            <p className="text-gray-700 mb-4 font-bold leading-relaxed flex-grow italic">
+                              "{testimonial.text}"
+                            </p>
+                            <audio controls className="w-full mt-4">
+                              <source src={testimonial.audioSrc} type="audio/mpeg" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </>
+                        ) : (
+                          <p className="text-gray-700 mb-6 font-bold leading-relaxed flex-grow italic">
+                            "{testimonial.text}"
+                          </p>
+                        )}
 
-                <div className="border-t pt-4 mt-auto">
-                  <div className="font-heading font-semibold text-[#49225B]">{testimonial.name}</div>
-                  <div className="text-sm text-gray-600 mb-2">{testimonial.location}</div>
-                  <div className="text-sm text-[#B8860B] font-medium">
-                    {testimonial.treatment}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+                        <div className="border-t pt-4 mt-auto">
+                          <div className="font-heading font-semibold text-[#49225B]">{testimonial.name}</div>
+                          <div className="text-sm text-gray-600 mb-2">{testimonial.location}</div>
+                          <div className="text-sm text-[#B8860B] font-medium">
+                            {testimonial.treatment}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden sm:flex" />
+              <CarouselNext className="hidden sm:flex" />
+            </Carousel>
+          </motion.div>
           
-          <div className="text-center">
+          <div className="text-center mt-12">
             <Link to="/testimonials">
               <Button
                 variant="outline"
@@ -272,7 +289,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section (Unchanged) */}
       <section className="py-20 gradient-bg font-body">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
