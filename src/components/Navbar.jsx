@@ -67,7 +67,7 @@ const Navbar = () => {
               <NavLink key={item.name} to={item.path}>{item.name}</NavLink>
             ))}
             <a href={googleFormUrl} target="_blank" rel="noopener noreferrer">
-              <Button className="bg-[#49225B] hover:bg-[#6E3482] text-white">
+              <Button className="bg-[#49225B] hover:bg-[#6E3482] text-white text-sm font-medium">
                 Book Session
               </Button>
             </a>
@@ -94,7 +94,7 @@ const Navbar = () => {
                 </MobileNavLink>
               ))}
               <a href={googleFormUrl} target="_blank" rel="noopener noreferrer" className="block px-3 py-2" onClick={() => setIsOpen(false)}>
-                <Button className="w-full bg-[#49225B] hover:bg-[#6E3482] text-white">
+                <Button className="w-full bg-[#49225B] hover:bg-[#6E3482] text-white text-base font-medium">
                   Book Session
                 </Button>
               </a>
