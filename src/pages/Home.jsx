@@ -91,7 +91,7 @@ const Home = () => {
                   playsInline
                 >
                   <source
-                    src="https://imagekit.io/player/embed/rxkzfoqlj/VN20251006_220121.mp4?updatedAt=1759768396065"
+                    src="https://ik.imagekit.io/rxkzfoqlj/VN20251006_220121.mp4?updatedAt=1759768396065"
                     type="video/mp4"
                   />
                   Your browser does not support the video tag.
