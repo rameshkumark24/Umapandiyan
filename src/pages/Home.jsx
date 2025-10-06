@@ -27,15 +27,6 @@ const Home = () => {
       text: "I had significant financial difficulties, but since starting her coaching, I have been able to secure one order after another... This has allowed me to become financially stable.",
       treatment: "Holistic Healing for Finance",
       audioSrc: "https://audio.jukehost.co.uk/oEAX1CpCG5ilqYBmrfcWuAon8P8UziJO"
-    },
-    {
-      id: 9,
-      name: "Share Your Story",
-      location: "Your City",
-      rating: 5,
-      text: "Share your transformation story and inspire others on their journey to wellness and happiness. Your experience can be a guiding light for someone else.",
-      treatment: "Your Healing Journey",
-      audioSrc: null // No audio for the sample
     }
   ];
 
