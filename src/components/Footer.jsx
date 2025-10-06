@@ -67,7 +67,7 @@ const Footer = () => {
                 <Mail className="w-4 h-4" />
                 <span className="text-sm">umapandiyanlifecoach@gmail.com</span>
               </a>
-              <a href="https://wa.me/8870243437" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors">
+              <a href="https://wa.me/qr/N3NUDHCGZFV3H1" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors">
                 <Phone className="w-4 h-4" />
                 <span className="text-sm">+91 8870243437</span>
               </a>
