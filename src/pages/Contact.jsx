@@ -9,7 +9,7 @@ const Contact = () => {
       icon: MessageSquare,
       title: "WhatsApp",
       description: "Quick responses for support",
-      href: "https://wa.me/8870243437",
+      href: "https://wa.me/qr/N3NUDHCGZFV3H1",
       target: "_blank"
     },
     {
