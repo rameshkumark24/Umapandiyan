@@ -27,6 +27,14 @@ const Home = () => {
       text: "I had significant financial difficulties, but since starting her coaching, I have been able to secure one order after another... This has allowed me to become financially stable.",
       treatment: "Holistic Healing for Finance",
       audioSrc: "https://audio.jukehost.co.uk/oEAX1CpCG5ilqYBmrfcWuAon8P8UziJO"
+    },
+    {
+      id: 5,
+      name: "Reshma",
+      location: "Coimbatore",
+      rating: 5,
+      text: "Last year, I had irregular periods, and Uma's coaching helped me overcome the issue. I no longer face irregularities, and I feel better both physically and emotionally. Her guidance also contributed to my overall well-being and gave me a sense of mental peace during times when I used to feel overwhelmed.",
+      treatment: "Women's Wellness Coaching"
     }
   ];
 
