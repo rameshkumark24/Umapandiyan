@@ -67,7 +67,7 @@ const Navbar = () => {
               <NavLink key={item.name} to={item.path}>{item.name}</NavLink>
             ))}
             <a href={googleFormUrl} target="_blank" rel="noopener noreferrer">
-              <Button className="bg-[#49225B] hover:bg-[#6E3482] text-white-600">
+              <Button className="bg-[#49225B] hover:bg-[#6E3482] text-white text-base font-normal focus:outline-none px-4 px-2">
                 Book Session
               </Button>
             </a>
