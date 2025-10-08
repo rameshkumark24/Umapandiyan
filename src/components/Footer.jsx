@@ -44,6 +44,9 @@ const Footer = () => {
           <div>
             <span className="text-lg font-heading mb-4 block">Quick Links</span>
             <div className="space-y-2">
+              <Link to="/" className="block text-white/80 hover:text-white transition-colors">
+                Home
+              </Link>
               <Link to="/about" className="block text-white/80 hover:text-white transition-colors">
                 About
               </Link>
