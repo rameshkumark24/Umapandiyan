@@ -29,6 +29,14 @@ const Home = () => {
       audioSrc: "https://audio.jukehost.co.uk/oEAX1CpCG5ilqYBmrfcWuAon8P8UziJO"
     },
     {
+      id: 1,
+      name: "Lavanya",
+      location: "Canada",
+      rating: 5,
+      text: "Dear Coach, or should I say Happiness Restorer — I’m truly grateful for your guidance. The small changes you suggested—positive affirmations, letting go of complaints and expectations, and accepting others—have transformed my mindset. I feel peaceful, emotionally balanced, and genuinely happy again. It’s amazing how everything around me started shifting like magic. Thank you for helping me rediscover my happiness!",
+      treatment: "Mindset & Happiness Coaching"
+    },
+    {
       id: 5,
       name: "Reshma",
       location: "Coimbatore",
