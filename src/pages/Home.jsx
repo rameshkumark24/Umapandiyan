@@ -240,11 +240,11 @@ const Home = () => {
               }}
               className="w-full max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"
             >
-              <CarouselContent>
+              {/* --- THIS IS THE ONLY LINE THAT CHANGED --- */}
+              <CarouselContent className="-ml-1 px-12 sm:px-0">
                 {homeTestimonials.map((testimonial) => (
                   <CarouselItem key={testimonial.id} className="md:basis-1/2 lg:basis-1/3">
                     <div className="p-1 h-full">
-                      {/* --- THIS IS THE ONLY LINE THAT CHANGED --- */}
                       <div className="bg-[#F9EBF8] rounded-2xl p-6 shadow-lg hover-lift relative flex flex-col h-full">
                         <div className="absolute top-4 right-4 text-accent-gold opacity-20">
                           <Quote className="w-8 h-8" />
