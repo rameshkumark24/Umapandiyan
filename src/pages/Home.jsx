@@ -37,6 +37,14 @@ const Home = () => {
       treatment: "Mindset & Happiness Coaching"
     },
     {
+      id: 3,
+      name: "Arjun",
+      location: "Chennai",
+      rating: 5,
+      text: "Before the healing session, I was anxious and under pressure about my 10th board exams. After the session, my confidence grew, and I faced the exams calmly, scoring 80% and securing the Bio-Math group I wanted. All thanks to Uma aunty for this amazing transformation!",
+      treatment: "Student Confidence Building"
+    },
+    {
       id: 5,
       name: "Reshma",
       location: "Coimbatore",
