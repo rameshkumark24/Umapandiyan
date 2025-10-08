@@ -244,7 +244,8 @@ const Home = () => {
                 {homeTestimonials.map((testimonial) => (
                   <CarouselItem key={testimonial.id} className="md:basis-1/2 lg:basis-1/3">
                     <div className="p-1 h-full">
-                      <div className="bg-[#F9EBF8] rounded-2xl p-8 shadow-lg hover-lift relative flex flex-col h-full">
+                      {/* --- THIS IS THE ONLY LINE THAT CHANGED --- */}
+                      <div className="bg-[#F9EBF8] rounded-2xl p-6 shadow-lg hover-lift relative flex flex-col h-full">
                         <div className="absolute top-4 right-4 text-accent-gold opacity-20">
                           <Quote className="w-8 h-8" />
                         </div>
@@ -283,7 +284,6 @@ const Home = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              {/* UPDATED: Arrows are now visible on mobile */}
               <CarouselPrevious className="left-[-10px] sm:-left-12" />
               <CarouselNext className="right-[-10px] sm:-right-12" />
             </Carousel>
