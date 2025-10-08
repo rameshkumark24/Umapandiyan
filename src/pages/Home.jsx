@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, UserCheck, HeartHandshake, Zap, Sunrise, Sparkles, Star, Quote } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-// NEW: Import the Carousel components
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 const Home = () => {
@@ -228,7 +227,6 @@ const Home = () => {
             </p>
           </motion.div>
 
-          {/* Carousel replaces the grid */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -285,12 +283,13 @@ const Home = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="hidden sm:flex" />
-              <CarouselNext className="hidden sm:flex" />
+              {/* UPDATED: Arrows are now visible on mobile */}
+              <CarouselPrevious className="left-[-10px] sm:-left-12" />
+              <CarouselNext className="right-[-10px] sm:-right-12" />
             </Carousel>
           </motion.div>
           
-          <div className="text-center mt-12">
+          <div className="text-center mt-16">
             <Link to="/testimonials">
               <Button
                 variant="outline"
