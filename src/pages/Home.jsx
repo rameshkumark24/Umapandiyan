@@ -257,7 +257,6 @@ const Home = () => {
 
                         {testimonial.audioSrc ? (
                           <>
-                            {/* UPDATED: Removed 'italic' class */}
                             <p className="text-gray-700 mb-4 font-bold leading-relaxed flex-grow">
                               "{testimonial.text}"
                             </p>
@@ -268,7 +267,6 @@ const Home = () => {
                           </>
                         ) : (
                           <>
-                            {/* UPDATED: Removed 'italic' class */}
                             <p className="text-gray-700 mb-6 font-bold leading-relaxed flex-grow">
                               "{testimonial.text}"
                             </p>
@@ -307,8 +305,8 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      {/* UPDATED: This section now uses 'gradient-bg' to match the footer */}
-      <section className="py-20 gradient-bg font-body">
+      {/* UPDATED: This section now uses a solid, dark purple background */}
+      <section className="py-20 bg-[#49225B] font-body">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
