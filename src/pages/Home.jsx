@@ -63,7 +63,7 @@ const Home = () => {
         />
       </Helmet>
 
-      {/* Hero Section (Unchanged) */}
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden font-body">
         <div className="absolute inset-0 bg-gradient-to-br from-white to-primary-lightest opacity-50"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -149,7 +149,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Offerings Section (Unchanged) */}
+      {/* Offerings Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -192,7 +192,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Quote Section (Unchanged) */}
+      {/* Quote Section */}
       <section className="py-20 bg-white font-body">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -209,7 +209,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* UPDATED Testimonials Section */}
+      {/* Testimonials Section */}
       <section className="py-20 bg-white font-body">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -240,11 +240,10 @@ const Home = () => {
               }}
               className="w-full max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"
             >
-              <CarouselContent>
+              <CarouselContent className="-ml-1 px-12 sm:px-0">
                 {homeTestimonials.map((testimonial) => (
                   <CarouselItem key={testimonial.id} className="md:basis-1/2 lg:basis-1/3">
                     <div className="p-1 h-full">
-                      {/* --- THIS IS THE ONLY LINE THAT CHANGED --- */}
                       <div className="bg-[#F9EBF8] rounded-2xl p-6 shadow-lg hover-lift relative flex flex-col h-full">
                         <div className="absolute top-4 right-4 text-accent-gold opacity-20">
                           <Quote className="w-8 h-8" />
@@ -258,7 +257,8 @@ const Home = () => {
 
                         {testimonial.audioSrc ? (
                           <>
-                            <p className="text-gray-700 mb-4 font-bold leading-relaxed flex-grow italic">
+                            {/* UPDATED: Removed 'italic' class */}
+                            <p className="text-gray-700 mb-4 font-bold leading-relaxed flex-grow">
                               "{testimonial.text}"
                             </p>
                             <audio controls className="w-full mt-4">
@@ -267,9 +267,12 @@ const Home = () => {
                             </audio>
                           </>
                         ) : (
-                          <p className="text-gray-700 mb-6 font-bold leading-relaxed flex-grow italic">
-                            "{testimonial.text}"
-                          </p>
+                          <>
+                            {/* UPDATED: Removed 'italic' class */}
+                            <p className="text-gray-700 mb-6 font-bold leading-relaxed flex-grow">
+                              "{testimonial.text}"
+                            </p>
+                          </>
                         )}
 
                         <div className="border-t pt-4 mt-auto">
@@ -303,7 +306,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section (Unchanged) */}
+      {/* CTA Section */}
+      {/* UPDATED: This section now uses 'gradient-bg' to match the footer */}
       <section className="py-20 gradient-bg font-body">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
