@@ -24,9 +24,12 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
-                <span className="text-white font-heading text-lg">U</span>
-              </div>
+              {/* UPDATED: Changed to use an image for the logo */}
+              <img
+                src="https://i.postimg.cc/RFZTXg00/Professional-Lettermark-Logo-with-U.png"
+                alt="Uma Pandiyan Logo"
+                className="w-10 h-10 object-contain" 
+              />
               <span className="text-xl font-heading">Uma Pandiyan</span>
             </div>
             <p className="text-white/80 mb-4 max-w-md">
@@ -92,4 +95,5 @@ const Footer = () => {
     </footer>
   );
 };
+
 export default Footer;
