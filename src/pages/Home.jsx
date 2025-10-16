@@ -305,8 +305,8 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      {/* UPDATED: This section now uses a solid, dark purple background */}
-      <section className="py-20 bg-[#49225B] font-body">
+      {/* UPDATED: Reverted to 'gradient-bg' to perfectly match the footer's gradient */}
+      <section className="py-20 gradient-bg font-body">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
