@@ -81,7 +81,6 @@ const Terms = () => {
             className="text-center mb-12 p-4 bg-[#F5EBFA] rounded-lg"
           >
             <p className="text-sm text-gray-600">
-              {/* UPDATED: Date is now fixed */}
               <strong>Last Updated:</strong> October 8, 2025
             </p>
           </motion.div>
@@ -103,8 +102,8 @@ const Terms = () => {
                   </div>
                   <h2 className="text-2xl font-playfair font-bold text-[#49225B]">{section.title}</h2>
                 </div>
-                {/* UPDATED: Changed to a list and removed italic style */}
-                <ul className="list-disc list-inside space-y-3 text-gray-700 leading-relaxed">
+                {/* UPDATED: Changed to list-outside and added ml-5 for hanging indent */}
+                <ul className="list-disc list-outside ml-5 space-y-3 text-gray-700 leading-relaxed">
                   {section.content.map((point, i) => (
                     <li key={i}>{point}</li>
                   ))}
@@ -127,7 +126,6 @@ const Terms = () => {
             <div className="space-y-6 text-gray-700">
               <div>
                 <h3 className="text-lg font-playfair font-semibold text-[#49225B] mb-3">1. Service Description</h3>
-                {/* UPDATED: Removed italic style */}
                 <p>
                   Services are intended to provide holistic support, including relaxation, guidance,
                   and wellness practices. These services are not a substitute for professional medical
@@ -137,7 +135,6 @@ const Terms = () => {
 
               <div>
                 <h3 className="text-lg font-playfair font-semibold text-[#49225B] mb-3">2. Client Responsibilities</h3>
-                {/* UPDATED: Removed italic style */}
                 <p>
                   Clients are expected to provide accurate information regarding their health, follow
                   guidance provided during sessions, and notify practitioners of any medical conditions
@@ -147,7 +144,6 @@ const Terms = () => {
 
               <div>
                 <h3 className="text-lg font-playfair font-semibold text-[#49225B] mb-3">3. Payment Terms</h3>
-                {/* UPDATED: Removed italic style */}
                 <p>
                   All payments must be made prior to the session unless otherwise agreed. Accepted
                   payment methods include UPI, bank transfer, and cards. Refunds are not applicable
@@ -157,7 +153,6 @@ const Terms = () => {
 
               <div>
                 <h3 className="text-lg font-playfair font-semibold text-[#49225B] mb-3">4. Cancellation & Rescheduling</h3>
-                {/* UPDATED: Removed italic style */}
                 <p>
                   Cancellations must be made at least 24 hours before the session for a full reschedule.
                   No-shows or late cancellations may result in forfeiture of the session fee.
@@ -166,7 +161,6 @@ const Terms = () => {
 
               <div>
                 <h3 className="text-lg font-playfair font-semibold text-[#49225B] mb-3">5. Confidentiality</h3>
-                {/* UPDATED: Removed italic style */}
                 <p>
                   All client information shared during sessions will remain confidential and will not
                   be disclosed to third parties unless required by law.
@@ -175,7 +169,6 @@ const Terms = () => {
 
               <div>
                 <h3 className="text-lg font-playfair font-semibold text-[#49225B] mb-3">6. Limitations & Disclaimers</h3>
-                {/* UPDATED: Removed italic style */}
                 <p>
                   Holistic therapy is complementary in nature and does not guarantee specific outcomes.
                   Practitioners are not liable for any decisions made by clients based on the guidance
@@ -185,7 +178,6 @@ const Terms = () => {
 
               <div>
                 <h3 className="text-lg font-playfair font-semibold text-[#49225B] mb-3">7. Liability</h3>
-                {/* UPDATED: Removed italic style */}
                 <p>
                   By participating in services, clients acknowledge that they do so at their own risk.
                   Practitioners are not responsible for any physical, emotional, or financial outcomes
