@@ -26,7 +26,7 @@ const About = () => {
         }} transition={{
           duration: 0.8
         }} className="text-center mb-16">
-            <h1 className="text-3xl md:text-5xl font-heading font-bold text-gradient mb-6 max-w-4xl mx-auto leading-relaxed tracking-normal">"Pain isn't the end — it's the beginning of evolution."</h1>
+            <h1 className="text-3xl md:text-5xl font-heading font-bold text-gradient mb-6 max-w-4xl mx-auto leading-relaxed tracking-normal">"Pain isn't the end - it's the beginning of evolution."</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">Uma Pandiyan - Life Coach & Healer</p>
           </motion.div>
 
