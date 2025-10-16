@@ -27,7 +27,7 @@ const About = () => {
           duration: 0.8
         }} className="text-center mb-16">
             <h1 className="text-3xl md:text-5xl font-heading font-bold text-gradient mb-6 max-w-4xl mx-auto leading-relaxed tracking-normal">"Pain isn't the end — it's the beginning of evolution."</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Uma Pandiyan —   Life Coach & Healer</p>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Uma Pandiyan - Life Coach & Healer</p>
           </motion.div>
 
           {/* Personal Story Section */}
@@ -72,13 +72,13 @@ const About = () => {
           }} className="space-y-6">
               <h2 className="text-3xl font-heading font-bold text-[#49225B]">My Journey</h2>
               <div className="space-y-4 text-gray-650">
-              <p>I wasn’t born a coach. I was shaped into one — by life, by pain, and by relentless determination.</p>
-              <p>As a child, I was called names that no child should hear: “dull-headed”, “dusky”, “unfit for anything.” I grew up hearing what I couldn’t do. But somewhere deep within, I knew I was more. I didn’t have anyone telling me that — I had to prove it to myself.</p>
-              <p>I fought my way through labels and low expectations and went on to complete my Master’s degree. But the real tests came after that. Marriage brought with it many challenges — emotionally, physically, and financially. I faced unexpected storms, one of the most severe being retinal detachment in both eyes. I underwent surgery, but I didn’t stop there. I refused to live in darkness, both physically and emotionally. That was the turning point. I rebuilt. I healed. And more importantly, I learned how to guide others to heal themselves.</p>
-              <p>Today, I am not just a certified life coach and healer. I am someone who has lived every shade of struggle and found light on the other side. I’ve helped people rise above chronic health conditions, broken relationships, deep-rooted financial fears, identity loss, career blocks, and emotional and spiritual crises. If there’s one thing I know to be true, it’s this: You are not your situation. Your illness, your finances, your broken past — none of them can stop you when your inner "yes" is strong enough.</p>
-              <p>This space — my coaching and healing — is not about motivation. It’s about transformation. It’s not about quick fixes. It’s about lasting shifts. And most importantly, it’s not theory. It’s truth, lived and tested.</p>
-              <p>If you feel stuck, I’ve been there. If you’re tired of trying, I know the feeling. But if you’re willing to believe there’s another way, then I’m here to help you find it. Let’s begin.</p>
-              </div>
+            <p>I wasn’t born a coach. I was shaped into one by life, by pain, and by relentless determination.</p>
+            <p>As a child, I was called names that no child should hear: “dull headed”, “dusky”, “unfit for anything.” I grew up hearing what I couldn’t do. But somewhere deep within, I knew I was more. I didn’t have anyone telling me that, I had to prove it to myself.</p>
+            <p>I fought my way through labels and low expectations and went on to complete my Master’s degree. But the real tests came after that. Marriage brought with it many challenges — emotionally, physically, and financially. I faced unexpected storms, one of the most severe being retinal detachment in both eyes. I underwent surgery, but I didn’t stop there. I refused to live in darkness, both physically and emotionally. That was the turning point. I rebuilt. I healed. And more importantly, I learned how to guide others to heal themselves.</p>
+            <p>Today, I am not just a certified life coach and healer. I am someone who has lived every shade of struggle and found light on the other side. I’ve helped people rise above chronic health conditions, broken relationships, deep rooted financial fears, identity loss, career blocks, and emotional and spiritual crises. If there’s one thing I know to be true, it’s this: You are not your situation. Your illness, your finances, your broken past — none of them can stop you when your inner "yes" is strong enough.</p>
+            <p>This space, my coaching and healing, is not about motivation. It’s about transformation. It’s not about quick fixes. It’s about lasting shifts. And most importantly, it’s not theory. It’s truth, lived and tested.</p>
+            <p>If you feel stuck, I’ve been there. If you’re tired of trying, I know the feeling. But if you’re willing to believe there’s another way, then I’m here to help you find it. Let’s begin.</p>
+            </div>
             </motion.div>
           </div>
         </div>
