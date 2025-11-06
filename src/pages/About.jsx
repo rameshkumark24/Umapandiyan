@@ -54,7 +54,7 @@ const About = () => {
                 }} 
                 className="w-full h-auto rounded-2xl shadow-2xl" 
                 alt="Uma Pandiyan, a professional and welcoming holistic therapist" 
-                src="https://ibb.co/nM0jnxnH" 
+                src="https://i.ibb.co/N23Kmcm8/Whats-App-Image-2025-11-06-at-8-59-21-PM.jpg" 
                 onContextMenu={handleContextMenu}
               />
             </motion.div>
