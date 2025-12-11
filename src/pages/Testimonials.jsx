@@ -67,9 +67,18 @@ const Testimonials = () => {
       name: "Hema",
       location: "Dindugul",
       rating: 5,
-      text: "Hi, this is Hema. I had heard about Uma's coaching a year and a half ago, but I took it lightly at the time. I'm from out of town and am currently staying with my parents. I knew she had coached a girl whose results were superb. I have struggled a lot and faced many challenges in my life. Now, she is coaching me, and I feel much better. I had significant financial difficulties, but since starting her coaching, I have been able to secure one order after another in my work. This has allowed me to become financially stable.I am now referring my husband to her as well.Thank you.",
+      text: "Hi, this is Hema. I had heard about Uma's coaching a year and a half ago, but I took it lightly at the time. I'm from out of town and am currently staying with my parents. I knew she had coached a girl whose results were superb. I have struggled a lot and faced many challenges in my life. Now, she is coaching me, and I feel much better. I had significant financial difficulties, but since starting her coaching, I have been able to secure one order after another in my work. This has allowed me to become financially stable. I am now referring my husband to her as well. Thank you.",
       treatment: "Holistic Healing for Finance",
       audioSrc: "https://audio.jukehost.co.uk/oEAX1CpCG5ilqYBmrfcWuAon8P8UziJO"
+    },
+    {
+      id: 9,
+      name: "Client Feedback",
+      location: "WhatsApp",
+      rating: 5,
+      text: "A heartfelt message shared directly after our session:",
+      treatment: "Personal Transformation",
+      imageSrc: "https://i.ibb.co/dwDsB7K9/Whats-App-Image-2025-12-11-at-10-40-13-PM.jpg" // Added your image link here
     }
   ];
 
@@ -122,8 +131,21 @@ const Testimonials = () => {
                   ))}
                 </div>
 
-                {/* Conditional rendering for audio or text */}
-                {testimonial.audioSrc ? (
+                {/* Conditional rendering for Image, Audio, or Text */}
+                {testimonial.imageSrc ? (
+                  <div className="flex-grow">
+                    <p className="text-gray-700 mb-4 font-bold leading-relaxed">
+                      "{testimonial.text}"
+                    </p>
+                    <div className="rounded-lg overflow-hidden border-2 border-white shadow-sm">
+                      <img 
+                        src={testimonial.imageSrc} 
+                        alt="Client WhatsApp Testimonial" 
+                        className="w-full h-auto object-cover"
+                      />
+                    </div>
+                  </div>
+                ) : testimonial.audioSrc ? (
                   <>
                     <p className="text-gray-700 mb-4 font-bold leading-relaxed flex-grow">
                       "{testimonial.text}"
@@ -139,7 +161,7 @@ const Testimonials = () => {
                   </p>
                 )}
 
-                <div className="border-t pt-4 mt-auto">
+                <div className="border-t pt-4 mt-4">
                   <div className="font-heading font-semibold text-[#49225B]">{testimonial.name}</div>
                   <div className="text-sm text-gray-600 mb-2">{testimonial.location}</div>
                   <div className="text-sm text-[#B8860B] font-medium">
