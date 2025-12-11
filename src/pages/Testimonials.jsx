@@ -73,8 +73,8 @@ const Testimonials = () => {
     },
     {
       id: 9,
-      name: "Client Feedback",
-      location: "WhatsApp",
+      name: "Kumaran",
+      location: "Madurai",
       rating: 5,
       text: "A heartfelt message shared directly after our session:",
       treatment: "Personal Transformation",
