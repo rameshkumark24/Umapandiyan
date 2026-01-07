@@ -78,7 +78,16 @@ const Testimonials = () => {
       rating: 5,
       text: "A heartfelt message shared directly after our session:",
       treatment: "Personal Transformation",
-      imageSrc: "https://i.ibb.co/dwDsB7K9/Whats-App-Image-2025-12-11-at-10-40-13-PM.jpg" // Added your image link here
+      imageSrc: "https://i.ibb.co/dwDsB7K9/Whats-App-Image-2025-12-11-at-10-40-13-PM.jpg"
+    },
+    {
+      id: 10,
+      name: "Ratan",
+      location: "Madurai",
+      rating: 5,
+      text: "Feedback shared via WhatsApp:",
+      treatment: "Holistic Therapy",
+      imageSrc: "https://i.ibb.co/TxsV74Vj/Whats-App-Image-2026-01-07-at-8-32-37-PM.jpg"
     }
   ];
 
