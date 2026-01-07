@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
@@ -12,36 +12,50 @@ const Navbar = () => {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
+    // Added the new page here
+    { name: 'Daily Practice', path: '/daily-miracle-practice', isNew: true },
     { name: 'Testimonials', path: '/testimonials' },
     { name: 'Contact', path: '/contact' },
   ];
 
-  const NavLink = ({ to, children, onClick }) => {
+  const NavLink = ({ to, children, onClick, isNew }) => {
     const isActive = location.pathname === to;
     return (
       <Link
         to={to}
         onClick={onClick}
-        className={`text-sm font-medium transition-colors hover:text-accent-gold ${
+        className={`text-sm font-medium transition-colors hover:text-accent-gold flex items-center gap-1 ${
           isActive ? 'text-[#49225B] border-b-2 border-accent-gold' : 'text-gray-600'
-        }`}
+        } ${isNew ? 'text-[#49225B] font-bold' : ''}`}
       >
         {children}
+        {isNew && (
+           <span className="bg-[#B8860B] text-white text-[10px] px-1.5 py-0.5 rounded-full ml-1 animate-pulse">
+             NEW
+           </span>
+        )}
       </Link>
     );
   };
 
-  const MobileNavLink = ({ to, children, onClick }) => {
+  const MobileNavLink = ({ to, children, onClick, isNew }) => {
     const isActive = location.pathname === to;
     return (
       <Link
         to={to}
         onClick={onClick}
-        className={`block px-3 py-2 text-base font-medium transition-colors ${
+        className={`block px-3 py-2 text-base font-medium transition-colors flex items-center justify-between ${
           isActive ? 'text-[#49225B] bg-[#F5EBFA]' : 'text-gray-600 hover:text-[#49225B] hover:bg-[#F5EBFA]'
         }`}
       >
-        {children}
+        <span className="flex items-center gap-2">
+            {children}
+        </span>
+        {isNew && (
+            <span className="bg-[#B8860B] text-white text-xs px-2 py-0.5 rounded-full">
+                NEW
+            </span>
+        )}
       </Link>
     );
   };
@@ -64,7 +78,7 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map(item => (
-              <NavLink key={item.name} to={item.path}>{item.name}</NavLink>
+              <NavLink key={item.name} to={item.path} isNew={item.isNew}>{item.name}</NavLink>
             ))}
             <a href={googleFormUrl} target="_blank" rel="noopener noreferrer">
               <Button className="bg-[#49225B] hover:bg-[#6E3482] text-white text-sm font-medium">
@@ -89,7 +103,7 @@ const Navbar = () => {
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map(item => (
-                <MobileNavLink key={item.name} to={item.path} onClick={() => setIsOpen(false)}>
+                <MobileNavLink key={item.name} to={item.path} onClick={() => setIsOpen(false)} isNew={item.isNew}>
                   {item.name}
                 </MobileNavLink>
               ))}
