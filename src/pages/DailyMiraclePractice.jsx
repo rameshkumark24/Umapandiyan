@@ -163,11 +163,11 @@ const DailyMiraclePractice = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  // UPDATED: Card background is now dark purple, removed border, added deeper shadow
-                  className="bg-[#49225B] p-4 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
+                  // UPDATED: Changed background to light purple, similar to Testimonials section
+                  className="bg-[#F9EBF8] p-4 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300"
                 >
-                  {/* Image Container: Removed gray background to blend with card */}
-                  <div className="rounded-2xl overflow-hidden h-[600px] w-full relative">
+                  {/* Image Container */}
+                  <div className="rounded-2xl overflow-hidden h-[600px] w-full relative bg-white">
                     <img 
                       src={imgSrc} 
                       alt={`Daily Miracle Practice Review ${index + 1}`} 
