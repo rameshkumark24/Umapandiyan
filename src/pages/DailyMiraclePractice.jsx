@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-import { Calendar, Clock, CheckCircle, ArrowRight, Star, Heart } from 'lucide-react';
+import { Calendar, Clock, CheckCircle, ArrowRight, Star, Heart, Quote, Sparkles } from 'lucide-react';
 
 const DailyMiraclePractice = () => {
   // 1. UPDATED LINK: Your specific Google Form
@@ -142,7 +142,7 @@ const DailyMiraclePractice = () => {
           </div>
         </section>
 
-        {/* --- TRIAL REVIEWS SECTION --- */}
+        {/* --- TRIAL REVIEWS SECTION (UPDATED PROFESSIONAL DESIGN) --- */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -155,24 +155,46 @@ const DailyMiraclePractice = () => {
             </div>
 
             {/* Images Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-2">
               {trialReviews.map((imgSrc, index) => (
                 <motion.div 
                   key={index}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  // UPDATED: Changed background to light purple, similar to Testimonials section
-                  className="bg-[#F9EBF8] p-4 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  // PROFESSIONAL CARD DESIGN:
+                  // 1. Subtle Gradient (White to Light Purple)
+                  // 2. Elegant Border (Thin Purple)
+                  // 3. Hover Lift & Deep Shadow
+                  className="relative group bg-gradient-to-br from-white to-[#F9EBF8] p-3 rounded-3xl shadow-lg border border-purple-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
                 >
+                  {/* Decorative Floating Quote Badge */}
+                  <div className="absolute -top-3 -right-3 bg-[#B8860B] text-white p-3 rounded-full shadow-lg z-10 group-hover:scale-110 transition-transform duration-300">
+                    <Quote className="w-5 h-5 fill-current" />
+                  </div>
+
+                  {/* Decorative Sparkle (Visual Interest) */}
+                  <div className="absolute top-4 left-4 text-[#49225B] opacity-20">
+                    <Sparkles className="w-6 h-6" />
+                  </div>
+
                   {/* Image Container */}
-                  <div className="rounded-2xl overflow-hidden h-[600px] w-full relative bg-white">
+                  <div className="rounded-2xl overflow-hidden h-[600px] w-full relative bg-white border border-gray-50 shadow-inner">
                     <img 
                       src={imgSrc} 
                       alt={`Daily Miracle Practice Review ${index + 1}`} 
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-contain p-1"
                     />
+                  </div>
+                  
+                  {/* Bottom Strip (Optional, adds professional touch) */}
+                  <div className="mt-3 flex justify-center items-center gap-1 opacity-60">
+                     <Star className="w-3 h-3 fill-[#B8860B] text-[#B8860B]" />
+                     <Star className="w-3 h-3 fill-[#B8860B] text-[#B8860B]" />
+                     <Star className="w-3 h-3 fill-[#B8860B] text-[#B8860B]" />
+                     <Star className="w-3 h-3 fill-[#B8860B] text-[#B8860B]" />
+                     <Star className="w-3 h-3 fill-[#B8860B] text-[#B8860B]" />
                   </div>
                 </motion.div>
               ))}
