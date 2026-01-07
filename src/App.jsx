@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Home from '@/pages/Home';
 import About from '@/pages/About';
+import DailyMiraclePractice from './pages/DailyMiraclePractice';
 import Testimonials from '@/pages/Testimonials';
 import Contact from '@/pages/Contact';
 import BookSession from '@/pages/BookSession';
