@@ -149,8 +149,9 @@ const Home = () => {
         </div>
       </section>
 
-      {/* --- NEW PROGRAM ALERT SECTION --- */}
-      <section className="py-10 bg-gradient-to-r from-[#49225B] to-[#6a3283] text-white">
+      {/* --- NEW PROGRAM ALERT SECTION (Strict Palette Integration) --- */}
+      {/* Background uses primary purple #49225B */}
+      <section className="py-10 bg-[#49225B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <motion.div 
              initial={{ opacity: 0, scale: 0.95 }}
@@ -159,7 +160,8 @@ const Home = () => {
              className="flex flex-col md:flex-row items-center justify-between gap-6"
            >
               <div className="text-center md:text-left">
-                <div className="inline-flex items-center gap-2 px-3 py-1 mb-3 text-xs font-bold tracking-wider text-[#49225B] uppercase bg-[#ffcc00] rounded-full">
+                {/* Badge uses Brand Gold #B8860B */}
+                <div className="inline-flex items-center gap-2 px-3 py-1 mb-3 text-xs font-bold tracking-wider text-white uppercase bg-[#B8860B] rounded-full">
                   <Sparkle className="w-3 h-3" /> New Launch
                 </div>
                 <h2 className="text-2xl md:text-3xl font-heading font-bold mb-2">Daily Miracle Practice</h2>
@@ -169,7 +171,8 @@ const Home = () => {
               </div>
               <div>
                 <Link to="/daily-miracle-practice">
-                  <Button className="bg-[#ffcc00] text-[#49225B] hover:bg-white hover:text-[#49225B] px-8 py-6 text-lg font-bold shadow-xl rounded-full transition-all hover:scale-105">
+                  {/* Button uses White background with Purple text (Matches Footer CTA style) */}
+                  <Button className="bg-white text-[#49225B] hover:bg-gray-100 px-8 py-6 text-lg font-bold shadow-xl rounded-full transition-all hover:scale-105">
                     Explore Program <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </Link>
@@ -177,6 +180,7 @@ const Home = () => {
            </motion.div>
         </div>
       </section>
+      {/* ---------------------------------------------------------- */}
 
       {/* Offerings Section */}
       <section className="py-20 bg-white">
