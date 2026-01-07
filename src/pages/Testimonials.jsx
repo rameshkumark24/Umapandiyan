@@ -85,7 +85,7 @@ const Testimonials = () => {
       name: "Ratan",
       location: "Madurai",
       rating: 5,
-      text: "Feedback shared via WhatsApp:",
+      text: "A heartfelt message shared directly after our session:",
       treatment: "Holistic Therapy",
       imageSrc: "https://i.ibb.co/TxsV74Vj/Whats-App-Image-2026-01-07-at-8-32-37-PM.jpg"
     }
