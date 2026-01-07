@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 import { Calendar, Clock, CheckCircle, ArrowRight, Star, Heart } from 'lucide-react';
 
 const DailyMiraclePractice = () => {
-  // 1. UPDATE THIS LINK: Add your Google Form URL here
-  const googleFormLink = "https://docs.google.com/forms/"; 
+  // 1. UPDATED LINK: Your specific Google Form
+  const googleFormLink = "https://docs.google.com/forms/d/e/1FAIpQLSeZMmTnBnXvEx86B3K_aUfscQ0h7WAtWAAXurrYfwAcDeCeoQ/viewform"; 
 
-  // 2. UPDATED IMAGES: The 6 specific trial reviews
+  // 2. TRIAL REVIEWS: The 6 specific images you provided
   const trialReviews = [
     "https://i.ibb.co/whj9njDw/Whats-App-Image-2026-01-07-at-8-32-16-PM.jpg",
     "https://i.ibb.co/mCcs2Qgq/Whats-App-Image-2026-01-06-at-9-50-43-PM.jpg",
@@ -163,10 +163,11 @@ const DailyMiraclePractice = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-white p-3 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+                  // UPDATED: Card background is now dark purple, removed border, added deeper shadow
+                  className="bg-[#49225B] p-4 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
                 >
-                  {/* Image Container with FIXED HEIGHT and OBJECT-CONTAIN to prevent cutting */}
-                  <div className="rounded-xl overflow-hidden bg-gray-50 h-[600px] w-full relative">
+                  {/* Image Container: Removed gray background to blend with card */}
+                  <div className="rounded-2xl overflow-hidden h-[600px] w-full relative">
                     <img 
                       src={imgSrc} 
                       alt={`Daily Miracle Practice Review ${index + 1}`} 
