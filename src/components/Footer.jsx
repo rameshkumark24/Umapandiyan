@@ -24,7 +24,6 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              {/* UPDATED: Changed to motion.img, added rounded-full and whileHover animation */}
               <motion.img
                 src="https://i.postimg.cc/RFZTXg00/Professional-Lettermark-Logo-with-U.png"
                 alt="Uma Pandiyan Logo"
@@ -53,6 +52,10 @@ const Footer = () => {
               </Link>
               <Link to="/about" className="block text-white/80 hover:text-white transition-colors">
                 About
+              </Link>
+              {/* Added New Program Link Here */}
+              <Link to="/daily-miracle-practice" className="block text-white/80 hover:text-white transition-colors">
+                Daily Miracle Practice
               </Link>
               <Link to="/testimonials" className="block text-white/80 hover:text-white transition-colors">
                 Testimonials
