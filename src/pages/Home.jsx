@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, UserCheck, HeartHandshake, Zap, Sunrise, Sparkles, Star, Quote } from 'lucide-react';
+import { ArrowRight, UserCheck, HeartHandshake, Zap, Sunrise, Sparkles, Star, Quote, Sparkle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
@@ -149,6 +149,35 @@ const Home = () => {
         </div>
       </section>
 
+      {/* --- NEW PROGRAM ALERT SECTION --- */}
+      <section className="py-10 bg-gradient-to-r from-[#49225B] to-[#6a3283] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <motion.div 
+             initial={{ opacity: 0, scale: 0.95 }}
+             whileInView={{ opacity: 1, scale: 1 }}
+             viewport={{ once: true }}
+             className="flex flex-col md:flex-row items-center justify-between gap-6"
+           >
+              <div className="text-center md:text-left">
+                <div className="inline-flex items-center gap-2 px-3 py-1 mb-3 text-xs font-bold tracking-wider text-[#49225B] uppercase bg-[#ffcc00] rounded-full">
+                  <Sparkle className="w-3 h-3" /> New Launch
+                </div>
+                <h2 className="text-2xl md:text-3xl font-heading font-bold mb-2">Daily Miracle Practice</h2>
+                <p className="text-purple-100 max-w-xl">
+                  Join our exclusive evening community. Reset your vibration and manifest miracles every single day (Mon-Fri).
+                </p>
+              </div>
+              <div>
+                <Link to="/daily-miracle-practice">
+                  <Button className="bg-[#ffcc00] text-[#49225B] hover:bg-white hover:text-[#49225B] px-8 py-6 text-lg font-bold shadow-xl rounded-full transition-all hover:scale-105">
+                    Explore Program <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </Link>
+              </div>
+           </motion.div>
+        </div>
+      </section>
+
       {/* Offerings Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -193,7 +222,6 @@ const Home = () => {
       </section>
 
       {/* Quote Section */}
-      {/* UPDATED: Padding reduced from py-20 to py-10 */}
       <section className="py-10 bg-white font-body">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
