@@ -82,7 +82,7 @@ const Navbar = () => {
             ))}
             <a href={googleFormUrl} target="_blank" rel="noopener noreferrer">
               <Button className="bg-[#49225B] hover:bg-[#6E3482] text-white text-sm font-medium">
-                Book Session
+                Join Session
               </Button>
             </a>
           </div>
