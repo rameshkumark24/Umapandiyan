@@ -7,11 +7,14 @@ const DailyMiraclePractice = () => {
   // 1. UPDATE THIS LINK: Add your Google Form URL here
   const googleFormLink = "https://docs.google.com/forms/"; 
 
-  // 2. UPDATE IMAGES: Add your trial review image links here
+  // 2. UPDATED IMAGES: The 6 specific trial reviews
   const trialReviews = [
-    "https://i.ibb.co/TxsV74Vj/Whats-App-Image-2026-01-07-at-8-32-37-PM.jpg", 
-    // "LINK_TO_IMAGE_2",
-    // "LINK_TO_IMAGE_3"
+    "https://i.ibb.co/whj9njDw/Whats-App-Image-2026-01-07-at-8-32-16-PM.jpg",
+    "https://i.ibb.co/mCcs2Qgq/Whats-App-Image-2026-01-06-at-9-50-43-PM.jpg",
+    "https://i.ibb.co/XkNw8Mvr/Whats-App-Image-2026-01-06-at-9-50-44-PM-2.jpg",
+    "https://i.ibb.co/9mCCZwzD/Whats-App-Image-2026-01-06-at-9-50-44-PM-1.jpg",
+    "https://i.ibb.co/LdFJqyB6/Whats-App-Image-2026-01-06-at-9-50-44-PM.jpg",
+    "https://i.ibb.co/b5MXvmsY/Whats-App-Image-2026-01-06-at-9-50-59-PM.jpg"
   ];
 
   const handleRegister = () => {
@@ -160,13 +163,14 @@ const DailyMiraclePractice = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-white p-2 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
+                  className="bg-white p-3 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
                 >
-                  <div className="rounded-xl overflow-hidden bg-gray-100 aspect-[3/4] relative group">
+                  {/* Image Container with FIXED HEIGHT and OBJECT-CONTAIN to prevent cutting */}
+                  <div className="rounded-xl overflow-hidden bg-gray-50 h-[600px] w-full relative">
                     <img 
                       src={imgSrc} 
                       alt={`Daily Miracle Practice Review ${index + 1}`} 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                 </motion.div>
