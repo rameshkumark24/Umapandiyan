@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Home from '@/pages/Home';
 import About from '@/pages/About';
-import DailyMiraclePractice from './pages/DailyMiraclePractice';
+import DailyMiraclePractice from '@/pages/DailyMiraclePractice'; // Updated to use @ alias for consistency if needed, or keep './pages'
 import Testimonials from '@/pages/Testimonials';
 import Contact from '@/pages/Contact';
 import BookSession from '@/pages/BookSession';
@@ -21,7 +21,6 @@ const ScrollToTop = () => {
   return null;
 };
 
-
 function App() {
   return (
     <Router>
@@ -33,6 +32,10 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/testimonials" element={<Testimonials />} />
+            
+            {/* Added the new route here */}
+            <Route path="/daily-miracle-practice" element={<DailyMiraclePractice />} />
+            
             <Route path="/contact" element={<Contact />} />
             <Route path="/book-session" element={<BookSession />} />
             <Route path="/terms" element={<Terms />} />
