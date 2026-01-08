@@ -121,7 +121,7 @@ const DailyMiraclePractice = () => {
                   <p className="text-purple-200 font-medium mb-1 uppercase tracking-wider text-sm">Monthly Subscription</p>
                   <div className="flex items-center justify-center text-5xl font-bold mb-2">
                     <span className="text-3xl mr-1">₹</span>
-                    <span>5000</span>
+                    <span>1000</span>
                   </div>
                   <p className="text-sm text-purple-200 mb-8 border-b border-purple-800 pb-4 inline-block">
                     Per Month / Per Person
