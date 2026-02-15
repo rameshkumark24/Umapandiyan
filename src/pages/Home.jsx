@@ -84,7 +84,7 @@ const Home = () => {
               </motion.h2>
 
               <motion.p
-                className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl"
+                className="text-lg md:text-xl text-gray-700 mb-8 max-w-2xl"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -124,13 +124,13 @@ const Home = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="relative"
+              className="relative aspect-video"
             >
-              <div className="relative w-full max-w-md mx-auto">
+              <div className="relative w-full max-w-md mx-auto h-full">
                 <div className="absolute inset-0 gold-gradient-bg rounded-full blur-3xl opacity-30 floating-animation"></div>
 
                 <video
-                  className="relative z-10 w-full h-auto rounded-2xl shadow-2xl hover-lift"
+                  className="relative z-10 w-full h-full object-cover rounded-2xl shadow-2xl hover-lift"
                   controls
                   autoPlay
                   muted
@@ -141,6 +141,7 @@ const Home = () => {
                     src="https://ik.imagekit.io/rxkzfoqlj/VN20251006_220121.mp4?updatedAt=1759768396065"
                     type="video/mp4"
                   />
+                  <track kind="captions" label="English" srcLang="en" src="" default />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -153,31 +154,31 @@ const Home = () => {
       {/* Background uses primary purple #49225B */}
       <section className="py-10 bg-[#49225B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <motion.div 
-             initial={{ opacity: 0, scale: 0.95 }}
-             whileInView={{ opacity: 1, scale: 1 }}
-             viewport={{ once: true }}
-             className="flex flex-col md:flex-row items-center justify-between gap-6"
-           >
-              <div className="text-center md:text-left">
-                {/* Badge uses Brand Gold #B8860B */}
-                <div className="inline-flex items-center gap-2 px-3 py-1 mb-3 text-xs font-bold tracking-wider text-white uppercase bg-[#B8860B] rounded-full">
-                  <Sparkle className="w-3 h-3" /> New Launch
-                </div>
-                <h2 className="text-2xl md:text-3xl font-heading font-bold mb-2">Daily Miracle Practice</h2>
-                <p className="text-purple-100 max-w-xl">
-                  Join our exclusive evening community. Reset your vibration and manifest miracles every single day (Mon-Fri).
-                </p>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="flex flex-col md:flex-row items-center justify-between gap-6"
+          >
+            <div className="text-center md:text-left">
+              {/* Badge uses Brand Gold #B8860B */}
+              <div className="inline-flex items-center gap-2 px-3 py-1 mb-3 text-xs font-bold tracking-wider text-white uppercase bg-[#B8860B] rounded-full">
+                <Sparkle className="w-3 h-3" /> New Launch
               </div>
-              <div>
-                <Link to="/daily-miracle-practice">
-                  {/* Button uses White background with Purple text (Matches Footer CTA style) */}
-                  <Button className="bg-white text-[#49225B] hover:bg-gray-100 px-8 py-6 text-lg font-bold shadow-xl rounded-full transition-all hover:scale-105">
-                    Explore Program <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
-                </Link>
-              </div>
-           </motion.div>
+              <h2 className="text-2xl md:text-3xl font-heading font-bold mb-2">Daily Miracle Practice</h2>
+              <p className="text-purple-100 max-w-xl">
+                Join our exclusive evening community. Reset your vibration and manifest miracles every single day (Mon-Fri).
+              </p>
+            </div>
+            <div>
+              <Link to="/daily-miracle-practice">
+                {/* Button uses White background with Purple text (Matches Footer CTA style) */}
+                <Button className="bg-white text-[#49225B] hover:bg-gray-100 px-8 py-6 text-lg font-bold shadow-xl rounded-full transition-all hover:scale-105">
+                  Explore Program <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
       {/* ---------------------------------------------------------- */}
@@ -193,7 +194,7 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-gradient mb-4"> My Services</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto"></p>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto"></p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -210,15 +211,14 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`text-center p-6 rounded-2xl bg-gradient-to-br from-[#F5EBFA] to-white hover-lift ${
-                  index === 4 ? 'lg:col-start-2' : ''
-                }`}
+                className={`text-center p-6 rounded-2xl bg-gradient-to-br from-[#F5EBFA] to-white hover-lift ${index === 4 ? 'lg:col-start-2' : ''
+                  }`}
               >
                 <div className="w-16 h-16 mx-auto mb-4 gold-gradient-bg rounded-full flex items-center justify-center">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-heading font-semibold text-[#49225B] mb-3">{feature.title}</h3>
-                {feature.description && <p className="text-gray-600">{feature.description}</p>}
+                {feature.description && <p className="text-gray-700">{feature.description}</p>}
               </motion.div>
             ))}
           </div>
@@ -255,7 +255,7 @@ const Home = () => {
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-gradient mb-6">
               Words from a Transformed Life
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Listen to the real stories of transformation and healing directly from my clients.
             </p>
           </motion.div>
@@ -308,7 +308,7 @@ const Home = () => {
 
                         <div className="border-t pt-4 mt-auto">
                           <div className="font-heading font-semibold text-[#49225B]">{testimonial.name}</div>
-                          <div className="text-sm text-gray-600 mb-2">{testimonial.location}</div>
+                          <div className="text-sm text-gray-700 mb-2">{testimonial.location}</div>
                           <div className="text-sm text-[#B8860B] font-medium">
                             {testimonial.treatment}
                           </div>
@@ -322,7 +322,7 @@ const Home = () => {
               <CarouselNext className="right-[-10px] sm:-right-12" />
             </Carousel>
           </motion.div>
-          
+
           <div className="text-center mt-16">
             <Link to="/testimonials">
               <Button

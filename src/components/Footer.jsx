@@ -25,7 +25,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <motion.img
-                src="https://i.postimg.cc/RFZTXg00/Professional-Lettermark-Logo-with-U.png"
+                src="/logo-small.png"
                 alt="Uma Pandiyan Logo"
                 className="w-10 h-10 object-contain rounded-full"
                 whileHover={{ scale: 1.1 }}

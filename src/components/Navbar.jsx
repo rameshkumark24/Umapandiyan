@@ -24,15 +24,14 @@ const Navbar = () => {
       <Link
         to={to}
         onClick={onClick}
-        className={`text-sm font-medium transition-colors hover:text-accent-gold flex items-center gap-1 ${
-          isActive ? 'text-[#49225B] border-b-2 border-accent-gold' : 'text-gray-600'
-        } ${isNew ? 'text-[#49225B] font-bold' : ''}`}
+        className={`text-sm font-medium transition-colors hover:text-accent-gold flex items-center gap-1 ${isActive ? 'text-[#49225B] border-b-2 border-accent-gold' : 'text-gray-700'
+          } ${isNew ? 'text-[#49225B] font-bold' : ''}`}
       >
         {children}
         {isNew && (
-           <span className="bg-[#B8860B] text-white text-[10px] px-1.5 py-0.5 rounded-full ml-1 animate-pulse">
-             NEW
-           </span>
+          <span className="bg-[#B8860B] text-white text-[10px] px-1.5 py-0.5 rounded-full ml-1 animate-pulse">
+            NEW
+          </span>
         )}
       </Link>
     );
@@ -44,17 +43,16 @@ const Navbar = () => {
       <Link
         to={to}
         onClick={onClick}
-        className={`block px-3 py-2 text-base font-medium transition-colors flex items-center justify-between ${
-          isActive ? 'text-[#49225B] bg-[#F5EBFA]' : 'text-gray-600 hover:text-[#49225B] hover:bg-[#F5EBFA]'
-        }`}
+        className={`block px-3 py-2 text-base font-medium transition-colors flex items-center justify-between ${isActive ? 'text-[#49225B] bg-[#F5EBFA]' : 'text-gray-700 hover:text-[#49225B] hover:bg-[#F5EBFA]'
+          }`}
       >
         <span className="flex items-center gap-2">
-            {children}
+          {children}
         </span>
         {isNew && (
-            <span className="bg-[#B8860B] text-white text-xs px-2 py-0.5 rounded-full">
-                NEW
-            </span>
+          <span className="bg-[#B8860B] text-white text-xs px-2 py-0.5 rounded-full">
+            NEW
+          </span>
         )}
       </Link>
     );
@@ -68,7 +66,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden">
               <img
-                src="https://i.postimg.cc/RFZTXg00/Professional-Lettermark-Logo-with-U.png"  // place your uploaded logo here
+                src="/logo-small.png"
                 alt="Umapandiyan Holistic Therapist| Life Coach Logo "
                 className="w-full h-full object-cover"
               />
@@ -88,7 +86,7 @@ const Navbar = () => {
           </div>
 
           <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-600 hover:text-[#49225B] focus:outline-none">
+            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-700 hover:text-[#49225B] focus:outline-none" aria-label="Toggle menu">
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
