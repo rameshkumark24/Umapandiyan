@@ -50,6 +50,24 @@ const Home = () => {
       rating: 5,
       text: "Last year, I had irregular periods, and Uma's coaching helped me overcome the issue. I no longer face irregularities, and I feel better both physically and emotionally. Her guidance also contributed to my overall well-being and gave me a sense of mental peace during times when I used to feel overwhelmed.",
       treatment: "Women's Wellness Coaching"
+    },
+    {
+      id: 11,
+      name: "Happy Parent",
+      location: "Chennai",
+      rating: 5,
+      text: "A heartfelt message shared directly after our session:",
+      treatment: "Student Coaching",
+      imageSrc: "https://i.ibb.co/DfhCfr01/Whats-App-Image-2026-07-03-at-11-21-39-AM.jpg"
+    },
+    {
+      id: 13,
+      name: "Athip",
+      location: "Chennai",
+      rating: 5,
+      text: "I am a 12th board student, and I was in shock about my Math and Chemistry results—I actually thought I would fail. But thanks to the coaching, I scored more than 75%! I am so grateful.",
+      treatment: "Student Coaching",
+      videoSrc: "https://ik.imagekit.io/rxkzfoqlj/WhatsApp%20Video%202026-07-13%20at%208.42.20%20PM.mp4"
     }
   ];
 
@@ -288,7 +306,32 @@ const Home = () => {
                           ))}
                         </div>
 
-                        {testimonial.audioSrc ? (
+                        {testimonial.videoSrc ? (
+                          <div className="flex-grow">
+                            <p className="text-gray-700 mb-4 font-bold leading-relaxed">
+                              "{testimonial.text}"
+                            </p>
+                            <div className="rounded-lg overflow-hidden shadow-sm mt-4">
+                              <video controls className="w-full h-auto object-cover" preload="metadata">
+                                <source src={testimonial.videoSrc} type="video/mp4" />
+                                Your browser does not support the video tag.
+                              </video>
+                            </div>
+                          </div>
+                        ) : testimonial.imageSrc ? (
+                          <div className="flex-grow">
+                            <p className="text-gray-700 mb-4 font-bold leading-relaxed">
+                              "{testimonial.text}"
+                            </p>
+                            <div className="rounded-lg overflow-hidden shadow-sm mt-4">
+                              <img 
+                                src={testimonial.imageSrc} 
+                                alt="Client Testimonial" 
+                                className="w-full h-auto object-cover"
+                              />
+                            </div>
+                          </div>
+                        ) : testimonial.audioSrc ? (
                           <>
                             <p className="text-gray-700 mb-4 font-bold leading-relaxed flex-grow">
                               "{testimonial.text}"
