@@ -59,15 +59,6 @@ const Home = () => {
       text: "A heartfelt message shared directly after our session:",
       treatment: "Student Coaching",
       imageSrc: "https://i.ibb.co/DfhCfr01/Whats-App-Image-2026-07-03-at-11-21-39-AM.jpg"
-    },
-    {
-      id: 13,
-      name: "Athip",
-      location: "Chennai",
-      rating: 5,
-      text: "I am a 12th board student, and I was in shock about my Math and Chemistry results—I actually thought I would fail. But thanks to the coaching, I scored more than 75%! I am so grateful.",
-      treatment: "Student Coaching",
-      videoSrc: "https://ik.imagekit.io/rxkzfoqlj/WhatsApp%20Video%202026-07-13%20at%208.42.20%20PM.mp4"
     }
   ];
 
